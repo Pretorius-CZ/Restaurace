@@ -4,6 +4,13 @@ import os
 
 #Ceník
 final_price = 0
+polevka_price = 0
+hlavni_chod_price = 0
+dezert_price = 0
+nealko_price = 0
+alko_price = 0
+
+
 gp = 45
 fp = 46
 cs = 38
@@ -47,22 +54,27 @@ if polevka == "11":
     os.system('cls')
     print (f"Dobře, Gulášovka je za chvíli je tady. Na účet Vám připisujeme {gp} Kč.\n")
     final_price += gp
+    polevka_price = 45
 elif polevka == "12":
     os.system('cls')
     print (f"Dobře, Frankfurtská je za chvíli je tady. Na účet Vám připisujeme {fp} Kč.\n")
     final_price += fp
+    polevka_price = 46
 elif polevka == "13":
     os.system('cls')
     print (f"Dobře, Česnečka je za chvíli je tady. Na účet Vám připisujeme {cs} Kč.\n ")
     final_price += cs
+    polevka_price = 38
 elif polevka == "14":
     os.system('cls')
     print (f"Dobře, Hráškový krém je za chvíli je tady. Na účet Vám připisujeme {hk} Kč.\n")
     final_price += hk 
+    polevka_price = 40
 elif polevka == "10":
     os.system('cls')
     print ("V pořádku, tedy bez polévky")
     final_price += 0
+    polevka_price = 0
 else:
     os.system('cls')
     print ("Tuto položku bohužel nemáme v nabídce...\n")
@@ -82,15 +94,19 @@ if main_meal == "21":
     os.system('cls')
     print (f"V pořádku, gulášek tu bude za okamžik. Na účet Vám připisujeme {gk} Kč.\n ")
     final_price += gk
+    hlavni_chod_price = 89
 elif main_meal == "22":
     os.system('cls')
     print (f"Dobře, Smažák s hranolkami je za chvíli je tady. Na účet Vám připisujeme {sm} Kč.\n ")
     final_price += sm
+    hlavni_chod_price = 99
 elif main_meal == "23":
     os.system('cls')
     print (f"Dobře, Svíčková na smetaně je za chvíli je tady. Na účet Vám připisujeme {sv} Kč.\n ")
     final_price += sv
+    hlavni_chod_price = 135
 else:
+    os.system('cls')
     print ("Tuto položku bohužel nemáme v nabídce...\n")
 
 
@@ -111,19 +127,24 @@ if dezerty == "30":
     os.system('cls')
     print ("V pořádku, tedy bez sladkostí")
     final_price += 0
+    dezert_price = 0
 elif dezerty == "31":
     os.system('cls')
     print (f"Jistě, větrník je tu za okamžik. Na účet připisujeme {vet} Kč.")
     final_price += vet
+    dezert_price = 29
 elif dezerty == "32":
     os.system('cls')
     print (f"Jistě, výborná plněná trubička je tu za okamžik. Na účet připisujeme {tru} Kč.")
     final_price += tru
+    dezert_price = 39
 elif dezerty == "33":
     os.system('cls')
     print (f"Jistě, Sachr dortík je tu za okamžik. Na účet připisujeme {sac} Kč.")
     final_price += sac
+    dezert_price = 45
 else:
+    os.system('cls')
     print ("Tuto položku bohužel nemáme v nabídce...\n")
 
 
@@ -144,19 +165,24 @@ if nealko == "40":
     os.system('cls')
     print ("V pořádku, tedy bez nápoje")
     final_price += 0
+    nealko_price = 0
 elif nealko == "41":
     os.system('cls')
     print (f"Jistě, jedna Vídeňská káva. Na účet připisujeme {vk} Kč.")
     final_price += vk
+    nealko_price = 38
 elif nealko == "42":
     os.system('cls')
     print (f"Jistě, jedn Espresso. Na účet připisujeme {es} Kč.")
     final_price += es
+    nealko_price = 49
 elif nealko == "43":
     os.system('cls')
     print (f"Jistě, donesu sklenku vody. Na účet připisujeme {vod} Kč.")
     final_price += vod
+    nealko_price = 18
 else:
+    os.system('cls')
     print ("Tuto položku bohužel nemáme v nabídce...\n")
 
 
@@ -177,22 +203,30 @@ if alko == "50":
     os.system('cls')
     print ("V pořádku, tedy bez nápoje")
     final_price += 0
+    alko_price = 0
 elif alko == "51":
     os.system('cls')
     print (f"Sklenka výborné Ballantines už se nese. Na účet připisujeme {bal} Kč.")
     final_price += bal
+    alko_price = 99
 elif alko == "52":
     os.system('cls')
     print (f"Sklenka červeného vína z našeho sklepa už se nese. Na účet připisujeme {cer} Kč.")
     final_price += cer
+    alko_price = 65
 elif alko == "53":
     os.system('cls')
     print (f"Ano, jistě, jeden Myslivec už je na cestě.  už se nese. Na účet připisujeme {mys} Kč.")
     final_price += mys
+    alko_price = 56
 else:
+    os.system('cls')
     print ("Tuto položku bohužel nemáme v nabídce...\n")
 print ("\n")
-print (f"Děkuji za Vaši objednávku, zde je Váš účet na celkovou částku ve výši {final_price},- Kč")
+print (f"Děkuji za Vaši objednávku, zde je Váš účet...")
+print ("________________________")
+print (f"\nPolévka.........{polevka_price},- Kč\nHlavní chod....{hlavni_chod_price},- Kč\nDezert.........{dezert_price},- Kč\nNealko.........{nealko_price},- Kč\nAlkohol.........{alko_price},- Kč\n________________________\nCELKEM....... {final_price},- Kč")
+
 
 print (logo2)
     
